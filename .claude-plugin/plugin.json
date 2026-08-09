@@ -1,0 +1,17 @@
+{
+  "name": "norc",
+  "version": "0.1.0",
+  "description": "Manage norc cron jobs, machines, and run history from Claude Code via the norc MCP server.",
+  "author": { "name": "norc" },
+  "homepage": "https://norc.app",
+  "license": "MIT",
+  "mcpServers": {
+    "norc": {
+      "type": "http",
+      "url": "http://localhost:3000/mcp",
+      "headers": {
+        "Authorization": "Bearer ${NORC_API_KEY}"
+      }
+    }
+  }
+}
