@@ -9,10 +9,10 @@
       "name": "norc",
       "source": "./",
       "description": "Manage norc cron jobs, machines, and run history from Claude Code via the norc MCP server.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": { "name": "norc" },
       "homepage": "https://norc.app",
-      "repository": "https://github.com/norcapp/norc-plugin",
+      "repository": "https://github.com/norcapp/norc-claude-plugin",
       "license": "MIT",
       "keywords": ["norc", "cron", "mcp"]
     }
