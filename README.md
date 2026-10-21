@@ -18,6 +18,8 @@ Claude Code starts the MCP server itself (`npx -y norc-mcp`, stdio). Needs Node 
 
 > Verify `${NORC_API_KEY}` env-var interpolation in `.claude-plugin/plugin.json` against the current Claude Code MCP config docs — syntax may differ by version.
 
+Using Claude Desktop instead? Plugins are Claude Code only. See the [norc-mcp README](https://github.com/norcapp/norc-mcp#claude-desktop) to add the MCP server to `claude_desktop_config.json`.
+
 ## Commands
 
 | Command | MCP tool | Does |
