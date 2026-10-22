@@ -1,24 +1,24 @@
 # norc Claude Code plugin
 
-Slash commands for managing your [norc](https://norc.app) cron jobs, machines, and run history from Claude Code, backed by the [norc-mcp](https://github.com/norcapp/norc-mcp) server ([Docker Hub](https://hub.docker.com/r/norcapp/norc-mcp)).
+Slash commands for managing your [norc](https://norc.app) cron jobs, machines, and run history from Claude Code, backed by the [norc-mcp](https://github.com/norcapp/norc-mcp) server.
 
 ## Setup
 
-1. Run the MCP server (norc-mcp is an HTTP server, not stdio):
-   ```
-   docker run -p 3000:3000 norcapp/norc-mcp
-   ```
-2. Set your norc API key (starts with `norc_sk_`, from norc.app settings):
+1. Set your norc API key (starts with `norc_sk_`, from norc.app settings):
    ```
    export NORC_API_KEY=norc_sk_...
    ```
-3. Install this plugin:
+2. Install this plugin:
    ```
    claude plugin marketplace add norcapp/norc-claude-plugin
    claude plugin install norc
    ```
 
+Claude Code starts the MCP server itself (`npx -y norc-mcp`, stdio). Needs Node 20+; no Docker or separate server to run.
+
 > Verify `${NORC_API_KEY}` env-var interpolation in `.claude-plugin/plugin.json` against the current Claude Code MCP config docs — syntax may differ by version.
+
+Using Claude Desktop instead? Plugins are Claude Code only. See the [norc-mcp README](https://github.com/norcapp/norc-mcp#claude-desktop) to add the MCP server to `claude_desktop_config.json`.
 
 ## Commands
 
