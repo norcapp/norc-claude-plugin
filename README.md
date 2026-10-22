@@ -14,7 +14,7 @@ Slash commands for managing your [norc](https://norc.app) cron jobs, machines, a
    ```
 3. Install this plugin:
    ```
-   claude plugin marketplace add norcapp/norc-plugin
+   claude plugin marketplace add norcapp/norc-claude-plugin
    claude plugin install norc
    ```
 
