@@ -1,5 +1,6 @@
 {
   "name": "norc-plugin",
+  "description": "Claude Code plugins for norc, the cron job manager.",
   "owner": {
     "name": "norc",
     "url": "https://norc.app"
@@ -10,11 +11,17 @@
       "source": "./",
       "description": "Manage norc cron jobs, machines, and run history from Claude Code via the norc MCP server.",
       "version": "0.2.1",
-      "author": { "name": "norc" },
+      "author": {
+        "name": "norc"
+      },
       "homepage": "https://norc.app",
       "repository": "https://github.com/norcapp/norc-claude-plugin",
       "license": "MIT",
-      "keywords": ["norc", "cron", "mcp"]
+      "keywords": [
+        "norc",
+        "cron",
+        "mcp"
+      ]
     }
   ]
 }
