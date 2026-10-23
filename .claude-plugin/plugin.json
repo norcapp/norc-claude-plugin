@@ -1,16 +1,33 @@
 {
   "name": "norc",
-  "version": "0.2.0",
+  "displayName": "norc",
+  "version": "0.2.1",
   "description": "Manage norc cron jobs, machines, and run history from Claude Code via the norc MCP server.",
-  "author": { "name": "norc" },
+  "author": { "name": "norc", "url": "https://norc.app" },
   "homepage": "https://norc.app",
+  "repository": "https://github.com/norcapp/norc-claude-plugin",
   "license": "MIT",
+  "keywords": ["norc", "cron", "crontab", "mcp"],
+  "icon": "./icon.png",
+  "documentationUrl": "https://docs.norc.app/mcp",
+  "supportUrl": "https://norc.app/support",
+  "privacyPolicyUrl": "https://norc.app/privacy",
+  "termsOfServiceUrl": "https://norc.app/terms",
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "norc API key",
+      "description": "Create one in the norc vault: Settings, API Keys, Generate key. It starts with norc_sk_.",
+      "sensitive": true,
+      "required": true
+    }
+  },
   "mcpServers": {
     "norc": {
       "command": "npx",
-      "args": ["-y", "norc-mcp"],
+      "args": ["-y", "norc-mcp@0.3.0"],
       "env": {
-        "NORC_API_KEY": "${NORC_API_KEY}"
+        "NORC_API_KEY": "${user_config.api_key}"
       }
     }
   }
