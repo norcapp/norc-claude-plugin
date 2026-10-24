@@ -27,6 +27,8 @@ if (plugin) {
   for (const key of ['name', 'version', 'description']) {
     if (!plugin[key]) fail(`plugin.json: missing required field "${key}"`)
   }
+  const pin = (plugin.mcpServers?.norc?.args ?? []).find((a) => /^norc-mcp@/.test(a))
+  if (!pin || !/^norc-mcp@\d+\.\d+\.\d+$/.test(pin)) fail('plugin.json: norc-mcp must be pinned to an exact version')
   if (plugin.mcpServers?.norc?.type === 'http' && !plugin.mcpServers.norc.url) {
     fail('plugin.json: mcpServers.norc is type "http" but has no "url"')
   }
